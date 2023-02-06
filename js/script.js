@@ -104,8 +104,8 @@ window.onload = () => {
 document.getElementById("theme").addEventListener("click", function () {
   if (localStorage.theme == "clair") {
     localStorage.theme = "sombre";
-  } else {
     location.reload();
+  } else {
     localStorage.theme = "clair";
     location.reload();
   }
