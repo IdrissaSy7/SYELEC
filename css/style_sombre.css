@@ -417,6 +417,7 @@ footer a:hover {
 
   #contact {
     flex-direction: column;
+    margin-right: 5px;
   }
 
   #contact iframe {
