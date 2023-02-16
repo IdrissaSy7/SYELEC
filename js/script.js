@@ -92,7 +92,8 @@ const mail = document.querySelector("#mail");
 // Intégration
 
 // Logo entreprise
-logo.innerHTML = `<img src="img/logo.jpg" alt="Logo de l'entreprise">`;
+logo.innerHTML = `<a href="index.html"><img src="img/logo.jpg" alt="Logo de l'entreprise"></a>
+`;
 
 // Nom, Descriptions et Image de fond
 imgFond.innerHTML = `<img src="img/backgroundsection.webp" alt="Image d'outils de travail">`;
