@@ -7,30 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/S.png">
     <script src="https://kit.fontawesome.com/8efceb1c83.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/styles_light.css" id="theme-link">
+    <link rel="stylesheet" type="text/css" href="css/style_clair.css" id="theme-link">
 
     <title>SY ELEC - Maintenance, Electricité, Plomberie, Second Oeuvre</title>
 </head>
 
 <body>
 
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
     <header>
 
         <nav id="navigation">
 
-            <div id="logo"></div>
+            <div id="divMenu">
+                <div id="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
 
+                <div id="logo"></div>
 
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Accueil</a></li>
-                <li><a href="#section2"><i class="fa-solid fa-gear"></i>Prestations</a></li>
-                <li><a href="#section2"><i class="fa-solid fa-phone"></i>Contact</a></li>
-                <li><a href="devis.html"><i class="fa-solid fa-file-contract"></i>Devis</a></li>
-                <li id="theme"><i class="fa-solid fa-moon"></i></li>
-            </ul>
+                <div id="theme">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+            </div>
+
+            <div class="nav-invisible">
+
+                <ul>
+                    <li><a href="#section2"><i class="fa-solid fa-gear"></i>Prestations</a></li>
+                    <li><a href="#balise2"><i class="fa-solid fa-phone"></i>Contact</a></li>
+                    <li><a href="#section3"><i class="fa-solid fa-file-contract"></i>Devis</a></li>
+                </ul>
+
+            </div>
 
         </nav>
+
+
 
     </header>
 
@@ -83,7 +99,7 @@
             <!-- Script -->
         </article>
 
-        <article class="div">
+        <article class="div" id="balise2">
             <h2>Nous contacter</h2>
             <div id="contact">
                 <div>
@@ -113,7 +129,7 @@
     <section id="section3">
 
         <article class="devis">
-            <a href="devis.html">Demander votre devis gratuitement</a>
+            <a onclick="popupRedirect()">Demander votre devis gratuitement</a>
         </article>
 
     </section>
@@ -134,7 +150,9 @@
             <a href="mailto:contact@syelec.com">Des suggestions ?</a>
         </li>
     </footer>
+
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

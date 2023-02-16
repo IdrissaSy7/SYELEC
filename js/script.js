@@ -1,3 +1,48 @@
+// Loader
+
+function showContent() {
+  document.querySelector(".loader-container").classList.add("hidden");
+}
+
+setTimeout(showContent, 400);
+
+// Thème clair/sombre
+
+window.onload = () => {
+  let themeLink = document.getElementById("theme-link");
+
+  if (localStorage.theme != null) {
+    themeLink.href = `css/style_${localStorage.theme}.css`;
+  } else {
+    themeLink.href = `css/style_clair.css`;
+    localStorage.theme = "clair";
+  }
+};
+
+document.getElementById("theme").addEventListener("click", function () {
+  if (localStorage.theme == "clair") {
+    localStorage.theme = "sombre";
+    location.reload();
+  } else {
+    localStorage.theme = "clair";
+    location.reload();
+  }
+  themeLink.href = `css/style_${localStorage.theme}.css`;
+});
+
+// Menu déroulant
+const menu = document.querySelector("#menu-icon");
+const hidenav = document.querySelector(".nav-invisible");
+
+menu.addEventListener("click", () => {
+  hidenav.classList.toggle("nav-invisible");
+});
+
+// Pop-up
+function popupRedirect() {
+  window.open("devis.html", "_blank", "width=600,height=500");
+}
+
 // Constantes
 
 // Partie Header
@@ -50,7 +95,7 @@ const mail = document.querySelector("#mail");
 logo.innerHTML = `<img src="img/logo.jpg" alt="Logo de l'entreprise">`;
 
 // Nom, Descriptions et Image de fond
-imgFond.innerHTML = `<img src="img/backgroundsection.jpg" alt="Image d'outils de travail">`;
+imgFond.innerHTML = `<img src="img/backgroundsection.webp" alt="Image d'outils de travail">`;
 nomEntreprise.innerText = "Nom de l'entreprise";
 descriptionEntreprise.innerText = "Descriptions de l'entreprise";
 
@@ -87,27 +132,3 @@ mercredi.innerText = "Mercredi : 8h - 18h";
 jeudi.innerText = "Jeudi : 8h - 18h";
 vendredi.innerText = "Vendredi : 8h - 18h";
 samedi.innerText = "Samedi : 8h - 13h";
-
-// Thème sombre
-
-window.onload = () => {
-  let themeLink = document.getElementById("theme-link");
-
-  if (localStorage.theme != null) {
-    themeLink.href = `css/style_${localStorage.theme}.css`;
-  } else {
-    themeLink.href = `css/style_clair.css`;
-    localStorage.theme = "clair";
-  }
-};
-
-document.getElementById("theme").addEventListener("click", function () {
-  if (localStorage.theme == "clair") {
-    localStorage.theme = "sombre";
-    location.reload();
-  } else {
-    localStorage.theme = "clair";
-    location.reload();
-  }
-  themeLink.href = `css/style_${localStorage.theme}.css`;
-});
