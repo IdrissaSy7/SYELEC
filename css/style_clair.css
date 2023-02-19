@@ -255,10 +255,13 @@ footer a:hover {
   z-index: 2;
 }
 
+#theme i:nth-child(1) {
+  display: none;
+}
+
 #theme i {
   font-size: 1.8em;
-  color: black;
-  padding: 5px 10px;
+  padding: 7px 7px;
 }
 
 #theme i:hover {

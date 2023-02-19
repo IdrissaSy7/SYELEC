@@ -22,6 +22,7 @@ window.onload = () => {
 document.getElementById("theme").addEventListener("click", function () {
   if (localStorage.theme == "clair") {
     localStorage.theme = "sombre";
+    
     location.reload();
   } else {
     localStorage.theme = "clair";
