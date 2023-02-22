@@ -1,11 +1,3 @@
-// Loader
-
-// function showContent() {
-//   document.querySelector(".loader-container").classList.add("hidden");
-// }
-
-// setTimeout(showContent, 400);
-
 // Thème clair/sombre
 
 // window.onload = () => {
@@ -29,6 +21,17 @@
 //   }
 //   themeLink.href = `css/style_${localStorage.theme}.css`;
 // });
+
+// Thème
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+document.getElementById("theme").addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+  } else {
+    document.body.classList.toggle("dark-theme");
+  }
+});
 
 // Menu déroulant
 const menu = document.querySelector("#menu-icon");
