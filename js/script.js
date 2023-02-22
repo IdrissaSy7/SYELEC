@@ -16,14 +16,13 @@ toggleBtn.addEventListener("click", function () {
 if (localStorage.getItem("theme")) {
   let theme = localStorage.getItem("theme");
   document.body.classList.add(theme + "-theme");
+} else if (prefersDarkScheme.matches) {
+  // Appliquer le thème sombre par défaut si le navigateur est en mode sombre
+  document.body.classList.add("dark-theme");
+} else {
+  // Appliquer le thème clair par défaut si le navigateur est en mode clair
+  document.body.classList.add("light-theme");
 }
-// else if (prefersDarkScheme.matches) {
-//   // Appliquer le thème sombre par défaut si le navigateur est en mode sombre
-//   document.body.classList.add("dark-theme");
-// } else {
-//   // Appliquer le thème clair par défaut si le navigateur est en mode clair
-//   document.body.classList.add("light-theme");
-// }
 
 // Menu déroulant
 const menu = document.querySelector("#menu-icon");
