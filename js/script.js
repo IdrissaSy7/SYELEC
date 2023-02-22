@@ -1,13 +1,28 @@
-// Thème clair/sombre
+// // Thème clair/sombre
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const toggleBtn = document.getElementById("theme");
 
-document.getElementById("theme").addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-  } else {
-    document.body.classList.toggle("dark-theme");
-  }
+toggleBtn.addEventListener("click", function () {
+  // Vérifier le thème actuel
+  let currentTheme = document.body.classList.contains("dark-theme")
+    ? "dark"
+    : "light";
+  // Inverser le thème et l'enregistrer dans le localStorage
+  let newTheme = currentTheme === "dark" ? "light" : "dark";
+  document.body.classList.replace(currentTheme + "-theme", newTheme + "-theme");
+  localStorage.setItem("theme", newTheme);
 });
+// Vérifier si un thème a été enregistré dans le localStorage
+if (localStorage.getItem("theme")) {
+  let theme = localStorage.getItem("theme");
+  document.body.classList.add(theme + "-theme");
+} else if (prefersDarkScheme.matches) {
+  // Appliquer le thème sombre par défaut si le navigateur est en mode sombre
+  document.body.classList.add("dark-theme");
+} else {
+  // Appliquer le thème clair par défaut si le navigateur est en mode clair
+  document.body.classList.add("light-theme");
+}
 
 // Menu déroulant
 const menu = document.querySelector("#menu-icon");
