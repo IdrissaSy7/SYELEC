@@ -65,13 +65,13 @@ p {
 }
 
 .div,
-.devis a,
+#devis a,
 #navigation ul li a {
   background: var(--button-color);
 }
 
 #navigation ul li a:hover,
-.devis a:hover {
+#devis a:hover {
   background: var(--hover-color);
 }
 
@@ -228,7 +228,7 @@ p {
   margin-bottom: 60px;
 }
 
-.devis a {
+#devis a {
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -263,8 +263,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 form input[type="text"],
@@ -279,7 +279,6 @@ form textarea {
 }
 
 form button[type="submit"] {
-  background-color: #4caf50;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -289,18 +288,15 @@ form button[type="submit"] {
   margin-top: 20px;
 }
 
-form button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
 form label {
   font-size: 1.3em;
+  font-weight: bolder;
 }
 
 /* Couleurs interfaces page d'accueil */
 
 .div,
-.devis a,
+#devis a,
 #navigation ul li a {
   box-shadow: 0px 0px 7px #000000;
 }
@@ -308,7 +304,7 @@ form label {
 /* Hover interface page d'accueil */
 
 #navigation ul li a:hover,
-.devis a:hover {
+#devis a:hover {
   box-shadow: 0px 0px 10px;
 }
 
@@ -448,7 +444,7 @@ footer a:hover {
     height: 300px;
   }
 
-  .devis a {
+  #devis a {
     font-size: 0.8em;
   }
 
