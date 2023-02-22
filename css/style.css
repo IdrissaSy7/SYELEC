@@ -6,6 +6,7 @@ body {
   --button-color: #d0b8a8ce;
   --bkg-i-color: #c79e84;
   --hover-color: #d0b8a8;
+  --dot-color: #c79e84;
 }
 
 body.dark-theme {
@@ -15,6 +16,7 @@ body.dark-theme {
   --button-color: #2a3039;
   --bkg-i-color: #4a5058;
   --hover-color: #333941;
+  --dot-color: #f2f2f2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,7 @@ body.dark-theme {
     --button-color: #2a3039;
     --bkg-i-color: #4a5058;
     --hover-color: #333941;
+    --dot-color: #f2f2f2;
   }
   body.light-theme {
     --bkg-color: #f2f2f2;
@@ -34,6 +37,7 @@ body.dark-theme {
     --button-color: #d0b8a8ce;
     --bkg-i-color: #c79e84;
     --hover-color: #d0b8a8;
+    --dot-color: #c79e84;
   }
 }
 
@@ -76,6 +80,14 @@ p {
 
 form label {
   color: var(--text-color);
+}
+
+.dot {
+  background: var(--dot-color);
+}
+
+.loader-container {
+  background: var(--bkg-color);
 }
 
 /* Thème */
@@ -481,7 +493,6 @@ footer a:hover {
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -498,7 +509,6 @@ footer a:hover {
   height: 15px;
   margin: 0 5px;
   border-radius: 50%;
-  background-color: #d7c3b7;
   animation: dot-move 1s infinite;
 }
 
