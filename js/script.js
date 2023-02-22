@@ -1,7 +1,13 @@
-// // Thème clair/sombre
+// Loader
+function showContent() {
+  document.querySelector(".loader-container").classList.add("hidden");
+}
+
+setTimeout(showContent, 200);
+
+// Thème clair/sombre
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const toggleBtn = document.getElementById("theme");
-
 // Vérifier si un thème a été enregistré dans le localStorage
 if (localStorage.getItem("theme")) {
   let theme = localStorage.getItem("theme");
@@ -13,7 +19,6 @@ if (localStorage.getItem("theme")) {
   // Appliquer le thème clair par défaut si le navigateur est en mode clair
   document.body.classList.add("light-theme");
 }
-
 toggleBtn.addEventListener("click", function () {
   // Vérifier le thème actuel
   let currentTheme = document.body.classList.contains("dark-theme")
