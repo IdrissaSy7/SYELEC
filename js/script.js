@@ -3,7 +3,7 @@ function showContent() {
   document.querySelector(".loader-container").classList.add("hidden");
 }
 
-setTimeout(showContent, 200);
+setTimeout(showContent, 500);
 
 // Thème clair/sombre
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
