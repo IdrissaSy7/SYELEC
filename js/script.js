@@ -1,28 +1,4 @@
 // Thème clair/sombre
-
-// window.onload = () => {
-//   let themeLink = document.getElementById("theme-link");
-
-//   if (localStorage.theme != null) {
-//     themeLink.href = `css/style_${localStorage.theme}.css`;
-//   } else {
-//     themeLink.href = `css/style_clair.css`;
-//     localStorage.theme = "clair";
-//   }
-// };
-
-// document.getElementById("theme").addEventListener("click", function () {
-//   if (localStorage.theme == "clair") {
-//     localStorage.theme = "sombre";
-//     location.reload();
-//   } else {
-//     localStorage.theme = "clair";
-//     location.reload();
-//   }
-//   themeLink.href = `css/style_${localStorage.theme}.css`;
-// });
-
-// Thème
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 document.getElementById("theme").addEventListener("click", function () {
