@@ -1,0 +1,153 @@
+/* Thème clair */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f2f2f2;
+  }
+
+  body a {
+    color: black;
+  }
+
+  /* Nav */
+
+  #menu-icon {
+    color: black;
+  }
+
+  header {
+    background-color: white;
+  }
+
+  #navigation ul li a {
+    color: black;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: #f2f2f2;
+  }
+
+  /* Devis */
+
+  form label {
+    color: black;
+  }
+
+  /* Couleurs interfaces page d'accueil */
+
+  .div,
+  .devis a,
+  #navigation ul li a {
+    background-color: #d0b8a8ce;
+  }
+
+  /* Hover interface page d'accueil */
+
+  #navigation ul li a:hover,
+  .devis a:hover {
+    background-color: #d0b8a8;
+  }
+
+  /* Thème */
+
+  #theme {
+    background-color: #c79e84;
+  }
+
+  #theme i {
+    padding: 7px 7px;
+  }
+
+  #theme i:hover {
+    box-shadow: 0px 0px 5px inset black;
+  }
+}
+
+/* Thème sombre */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #20262e;
+  }
+
+  body a {
+    color: #f2f2f2;
+  }
+
+  h1 {
+    color: #f2f2f2;
+  }
+
+  h2 {
+    color: #f2f2f2;
+  }
+
+  h3 {
+    color: #f2f2f2;
+  }
+
+  p {
+    color: #f2f2f2;
+  }
+
+  /* Nav */
+
+  #menu-icon {
+    color: white;
+  }
+
+  header {
+    background-color: #20262e;
+  }
+
+  #navigation ul li a {
+    color: black;
+  }
+
+  #navigation ul li a i {
+    color: #f2f2f2;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: #20262e;
+  }
+
+  /* Devis */
+
+  form label {
+    color: #f2f2f2;
+  }
+
+  /* Couleurs interfaces page d'accueil */
+
+  .div,
+  .devis a,
+  #navigation ul li a {
+    background-color: #2a3039;
+    box-shadow: 0px 0px 7px #000000;
+  }
+
+  /* Hover interface page d'accueil */
+
+  #navigation ul li a:hover,
+  .devis a:hover {
+    background-color: #333941;
+  }
+
+  /* Thème */
+
+  #theme {
+    background-color: #4a5058;
+  }
+
+  #theme i {
+    color: white;
+    padding: 5px 10px;
+  }
+
+  #theme i:hover {
+    box-shadow: 0px 0px 5px inset white;
+  }
+}

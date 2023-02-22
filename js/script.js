@@ -1,34 +1,34 @@
 // Loader
 
-function showContent() {
-  document.querySelector(".loader-container").classList.add("hidden");
-}
+// function showContent() {
+//   document.querySelector(".loader-container").classList.add("hidden");
+// }
 
-setTimeout(showContent, 400);
+// setTimeout(showContent, 400);
 
 // Thème clair/sombre
 
-window.onload = () => {
-  let themeLink = document.getElementById("theme-link");
+// window.onload = () => {
+//   let themeLink = document.getElementById("theme-link");
 
-  if (localStorage.theme != null) {
-    themeLink.href = `css/style_${localStorage.theme}.css`;
-  } else {
-    themeLink.href = `css/style_clair.css`;
-    localStorage.theme = "clair";
-  }
-};
+//   if (localStorage.theme != null) {
+//     themeLink.href = `css/style_${localStorage.theme}.css`;
+//   } else {
+//     themeLink.href = `css/style_clair.css`;
+//     localStorage.theme = "clair";
+//   }
+// };
 
-document.getElementById("theme").addEventListener("click", function () {
-  if (localStorage.theme == "clair") {
-    localStorage.theme = "sombre";
-    location.reload();
-  } else {
-    localStorage.theme = "clair";
-    location.reload();
-  }
-  themeLink.href = `css/style_${localStorage.theme}.css`;
-});
+// document.getElementById("theme").addEventListener("click", function () {
+//   if (localStorage.theme == "clair") {
+//     localStorage.theme = "sombre";
+//     location.reload();
+//   } else {
+//     localStorage.theme = "clair";
+//     location.reload();
+//   }
+//   themeLink.href = `css/style_${localStorage.theme}.css`;
+// });
 
 // Menu déroulant
 const menu = document.querySelector("#menu-icon");

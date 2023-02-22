@@ -5,12 +5,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #20262e;
 }
 
 body a {
   text-decoration: none;
-  color: #f2f2f2;
   font-weight: bolder;
 }
 
@@ -20,35 +18,26 @@ body li {
 
 h1 {
   font-size: 32px;
-  color: #f2f2f2;
 }
 
 h2 {
   font-size: 28px;
-  color: #f2f2f2;
 }
 
 h3 {
   font-size: 21px;
-  color: #f2f2f2;
 }
 
 p {
   font-size: 20px;
-  color: #f2f2f2;
 }
 
 /* Nav */
 
 #menu-icon {
   display: none;
-  color: white;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-header {
-  background-color: #20262e;
 }
 
 #navigation {
@@ -76,7 +65,6 @@ header {
 }
 
 #navigation ul li a {
-  color: rgb(255, 255, 255);
   font-weight: bolder;
   border-radius: 15px;
   padding: 15px;
@@ -84,7 +72,6 @@ header {
 
 #navigation ul li a i {
   margin-right: 10px;
-  color: #f2f2f2;
 }
 
 /* Section */
@@ -161,6 +148,7 @@ header {
 .devis a {
   padding: 20px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #section3 article {
@@ -170,7 +158,6 @@ header {
 /* Footer */
 
 footer {
-  background-color: #20262e;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -224,7 +211,6 @@ form button[type="submit"]:hover {
 }
 
 form label {
-  color: #f2f2f2;
   font-size: 1.3em;
 }
 
@@ -233,16 +219,14 @@ form label {
 .div,
 .devis a,
 #navigation ul li a {
-  background-color: #2a3039;
-  box-shadow: 0px 0px 7px #000000;
+  box-shadow: 0px 0px 7px;
 }
 
 /* Hover interface page d'accueil */
 
 #navigation ul li a:hover,
 .devis a:hover {
-  background-color: #333941;
-  box-shadow: 0px 0px 5px;
+  box-shadow: 0px 0px 10px;
 }
 
 footer a:hover {
@@ -255,66 +239,19 @@ footer a:hover {
   position: fixed;
   right: 10px;
   bottom: 40px;
-  background-color: #4a5058;
   border-radius: 50%;
   z-index: 2;
-}
-
-#theme i:nth-child(2) {
-  display: none;
+  cursor: pointer;
 }
 
 #theme i {
   font-size: 1.8em;
-  color: white;
   padding: 5px 10px;
 }
 
 #theme i:hover {
-  box-shadow: 0px 0px 5px inset white;
   border-radius: 50%;
 }
-
-/* Loader */
-
-/* .loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-}
-
-.loader {
-  width: 80px;
-  height: 80px;
-  border: 15px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  border-top: 15px solid #9052ee;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  box-shadow: inset 0px 0px 6px 2px grey, 0px 0px 6px 2px grey;
-  animation: loader 1s linear infinite;
-}
-
-@keyframes loader {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-} */
 
 /* Version tablette -> 768px */
 
@@ -446,5 +383,154 @@ footer a:hover {
     top: 25px;
     right: 5px;
     font-size: 1.5em;
+  }
+}
+
+/* Thème clair */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f2f2f2;
+  }
+
+  body a {
+    color: black;
+  }
+
+  /* Nav */
+
+  #menu-icon {
+    color: black;
+  }
+
+  header {
+    background-color: white;
+  }
+
+  #navigation ul li a {
+    color: black;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: #f2f2f2;
+  }
+
+  /* Devis */
+
+  form label {
+    color: black;
+  }
+
+  /* Couleurs interfaces page d'accueil */
+
+  .div,
+  .devis a,
+  #navigation ul li a {
+    background-color: #d0b8a8ce;
+  }
+
+  /* Hover interface page d'accueil */
+
+  #navigation ul li a:hover,
+  .devis a:hover {
+    background-color: #d0b8a8;
+  }
+
+  /* Thème */
+
+  #theme {
+    background-color: #c79e84;
+  }
+
+  #theme i:hover {
+    box-shadow: 0px 0px 5px inset black;
+  }
+}
+
+/* Thème sombre */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #20262e;
+  }
+
+  body a {
+    color: #f2f2f2;
+  }
+
+  h1 {
+    color: #f2f2f2;
+  }
+
+  h2 {
+    color: #f2f2f2;
+  }
+
+  h3 {
+    color: #f2f2f2;
+  }
+
+  p {
+    color: #f2f2f2;
+  }
+
+  /* Nav */
+
+  #menu-icon {
+    color: white;
+  }
+
+  header {
+    background-color: #20262e;
+  }
+
+  #navigation ul li a {
+    color: rgb(255, 255, 255);
+  }
+
+  #navigation ul li a i {
+    color: #f2f2f2;
+  }
+
+  /* Footer */
+
+  footer {
+    background-color: #20262e;
+  }
+
+  /* Devis */
+
+  form label {
+    color: #f2f2f2;
+  }
+
+  /* Couleurs interfaces page d'accueil */
+
+  .div,
+  .devis a,
+  #navigation ul li a {
+    background-color: #2a3039;
+    box-shadow: 0px 0px 7px #000000;
+  }
+
+  /* Hover interface page d'accueil */
+
+  #navigation ul li a:hover,
+  .devis a:hover {
+    background-color: #333941;
+  }
+
+  /* Thème */
+
+  #theme {
+    background-color: #4a5058;
+  }
+
+  #theme i {
+    color: white;
+  }
+
+  #theme i:hover {
+    box-shadow: 0px 0px 5px inset white;
   }
 }
