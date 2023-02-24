@@ -336,6 +336,7 @@ footer a:hover {
 #theme i {
   font-size: 1.8em;
   padding: 5px 10px;
+  transition: all 0s;
 }
 
 #theme i:hover {
