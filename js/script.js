@@ -6,27 +6,27 @@ function showContent() {
 setTimeout(showContent, 500);
 
 // Thème clair/sombre
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const toggleBtn = document.getElementById("theme");
+
 // Vérifier si un thème a été enregistré dans le localStorage
-if (localStorage.getItem("theme")) {
-  let theme = localStorage.getItem("theme");
-  document.body.classList.add(theme + "-theme");
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  // Appliquer le thème sombre par défaut si le navigateur est en mode sombre
-  document.body.classList.add("dark-theme");
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.body.classList.add(`${savedTheme}-theme`);
 } else {
-  // Appliquer le thème clair par défaut si le navigateur est en mode clair
-  document.body.classList.add("light-theme");
-}
-toggleBtn.addEventListener("click", function () {
-  // Vérifier le thème actuel
-  let currentTheme = document.body.classList.contains("dark-theme")
+  const systemPreference = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
     ? "dark"
     : "light";
-  // Inverser le thème et l'enregistrer dans le localStorage
-  let newTheme = currentTheme === "dark" ? "light" : "dark";
-  document.body.classList.replace(currentTheme + "-theme", newTheme + "-theme");
+  document.body.classList.add(`${systemPreference}-theme`);
+}
+
+toggleBtn.addEventListener("click", function () {
+  const currentTheme = document.body.classList.contains("dark-theme")
+    ? "dark"
+    : "light";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  document.body.classList.replace(`${currentTheme}-theme`, `${newTheme}-theme`);
   localStorage.setItem("theme", newTheme);
 });
 
