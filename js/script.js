@@ -6,19 +6,17 @@ function showContent() {
 setTimeout(showContent, 500);
 
 // Thème clair/sombre
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const toggleBtn = document.getElementById("theme");
+
 // Vérifier si un thème a été enregistré dans le localStorage
 if (localStorage.getItem("theme")) {
   let theme = localStorage.getItem("theme");
   document.body.classList.add(theme + "-theme");
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  // Appliquer le thème sombre par défaut si le navigateur est en mode sombre
-  document.body.classList.add("dark-theme");
 } else {
-  // Appliquer le thème clair par défaut si le navigateur est en mode clair
+  // Appliquer le thème clair par défaut si aucun thème n'a été enregistré
   document.body.classList.add("light-theme");
 }
+
 toggleBtn.addEventListener("click", function () {
   // Vérifier le thème actuel
   let currentTheme = document.body.classList.contains("dark-theme")
