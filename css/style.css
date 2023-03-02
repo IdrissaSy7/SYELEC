@@ -19,6 +19,28 @@ body.dark-theme {
   --dot-color: #f2f2f2;
 }
 
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --bkg-color: #20262e;
+    --header-color: #20262e;
+    --text-color: #f2f2f2;
+    --button-color: #2a3039;
+    --bkg-i-color: #4a5058;
+    --hover-color: #333941;
+    --dot-color: #f2f2f2;
+  }
+  body.light-theme {
+    --bkg-color: #f2f2f2;
+    --header-color: white;
+    --text-color: black;
+    --button-color: #d0b8a8ce;
+    --bkg-i-color: #c79e84;
+    --hover-color: #d0b8a8;
+    --dot-color: #c79e84;
+  }
+}
+
 body,
 footer {
   background: var(--bkg-color);
