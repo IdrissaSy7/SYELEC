@@ -71,6 +71,7 @@ p {
 .devis a,
 #navigation ul li a {
   background: var(--button-color);
+  box-shadow: 0px 0px 5px #000000;
 }
 
 #navigation ul li a:hover,
@@ -243,6 +244,7 @@ p {
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
+  display: block;
 }
 
 #section3 article {
@@ -303,19 +305,12 @@ form label {
   font-weight: bolder;
 }
 
-/* Couleurs interfaces page d'accueil */
-
-.div,
-.devis a,
-#navigation ul li a {
-  box-shadow: 0px 0px 7px #000000;
-}
-
 /* Hover interface page d'accueil */
 
 #navigation ul li a:hover,
 .devis a:hover {
   box-shadow: 0px 0px 10px;
+  border-radius: 10px;
 }
 
 footer a:hover {
